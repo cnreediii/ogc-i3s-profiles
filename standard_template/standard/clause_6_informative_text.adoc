@@ -1,6 +1,18 @@
-== Clauses not Containing Normative Material
+== Introduction
 
-Paragraph
+A single I3S data set, referred to as a Scene Layer, is a container for arbitrarily large amounts of heterogeneously distributed 3D geographic data. Scene Layers provide clients access to data and allow them to visualize it according to their needs. The definition of "data" in this case includes the geometry, attributes, and vertex geometry.
+
+A Scene Layer is characterized by a combination of layer type and profile. to fully describe the behavior of the layer and the manner in which it is realized within the standard. The layer type describes the kind of geospatial data stored within it. The layer profile includes additional details on the specific I3S implementation.
+
+The I3S format is declarative and extendable and can be used to represent different types of 3D data. The following layer types have been specified and the standard validated via implementation and production deployments:
+
+•	3D Objects (e.g. Building Exteriors from geospatial data and 3D models)
+•	Integrated Meshes (e.g. a mesh surface with high resolution imagery textures representing the skin of the Earth, typically created from satellite, aerial or drone imagery)
+•	Point Features (such as geolocated Hospitals or Schools, trees, street furniture, and signs)
+•	Point Clouds - (e.g. large point data from LiDAR) 
+•	Building Scene Layer (e.g. comprehensive building model including building components)
+
+This Community Standard document provides informative and normative clauses that define how to specify and encode the Point, Building m and Point Cloud Profiles.
 
 === Clauses not containing normative material sub-clause 1
 

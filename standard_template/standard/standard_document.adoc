@@ -17,25 +17,25 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: <yyyy-mm-dd>
-|Approval Date:   <yyyy-mm-dd>
-|Publication Date:   <yyyy-mm-dd>
+|Submission Date: 2019-mm-dd
+|Approval Date:   2019-mm-dd
+|Publication Date:   2019-mm-dd
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
-|Internal reference number of this OGC(R) document:    YY-nnnrx
-|Version: n.n
-|Category: OGC(R) <Implementation / Abstract Specification / Best Practice>
-|Editor:   <Name(s) of Editor or Editors>
+|Internal reference number of this OGC(R) document:    19-nnnrx
+|Version: 1.0
+|Category: OGC(R) Implementation - Community Standard
+|Editor:   Carl Reed and Tamrat Belayneh
 |===
 
 [cols = "^", frame = "none"]
 |===
-|[big]*{titletext}*
+|[big]*OGC Indexed 3d Scene Layer (I3S): Point, Building, and Point Cloud Profiles*
 |===
 
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) <year> Open Geospatial Consortium
+|Copyright (C) 2019 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
@@ -50,7 +50,7 @@ Recipients of this document are invited to submit, with their comments, notifica
 
 [width = "50%", grid = "none"]
 |===
-|Document type:   	OGC® <Standard/Abstract Specification/Best Practice>
+|Document type:   	OGC® Community Standard
 |Document subtype:   	if applicable
 |Document stage:   	Draft
 |Document language: 	English

@@ -3,5 +3,13 @@ This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r8], which 
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-=== *term name*
-text of the definition
+=== *LiDAR*
+Light Detection and Ranging, is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth.
+
+=== *Near Infrared Light*
+Generally refers to light within the wavenumber range of 12,500 to 4,000 cm-1 (wavelengths from 800 to 2,500 nm) (https://www.shimadzu.com/an/ftir/support/tips/letter9/nir1.html, March 2019)
+
+=== Point Cloud
+A point cloud is a set of data points in space. Point clouds are generally produced by 3D scanners, which measure a large number of points on the external surfaces of objects around them. (Wikipedia, https://en.wikipedia.org/wiki/Point_cloud, March 2019)
+
+

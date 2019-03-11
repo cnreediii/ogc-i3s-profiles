@@ -15,7 +15,7 @@ well as query point information.
 
 [#img_pointcloud,reftext='{figure-caption} {counter:figure-num}']
 .Example of point cloud rendering
-image::images/PointSceneLayer.png[width=600,align="center"]
+image::images/PointCloud[1].png[width=600,align="center"]
 
 === Point Cloud Scene Layer Structure
 

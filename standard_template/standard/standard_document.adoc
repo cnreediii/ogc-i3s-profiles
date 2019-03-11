@@ -107,9 +107,11 @@ include::clause_5_conventions.adoc[]
 
 include::clause_6_informative_text.adoc[]
 
-include::clause_7_PointSceneLayer.adoc[]
+include::clause_7_3dObjectLayer.adoc[]
 
-include::clause_8_MeshSceneLayer.adoc[]
+include::clause_8_PointSceneLayer.adoc[]
+
+include::clause_9_MeshSceneLayer.adoc[]
 
 include::clause_8_media_types.adoc[]
 

@@ -1,21 +1,14 @@
-== I3S Profile Definitions
-Paragraph
-
-=== Requirement Class A or Requirement A Example
-Paragraph – intro text for the requirement class.
+== I3S Point Scene Layer Profile
 
 Use the following table for Requirements Classes.
 
 include::requirements/requirements_class.adoc[]
 
-==== Requirement 1
-Paragraph - intro text for the requirement.
-
 Use the following table for Requirements, number sequentially.
 
 include::requirements/requirement.adoc[]
 
-=== Point Scene Layer Profile
+=== Introduction
 
 Point scene layers contain point features and their attributes. Point scene layers are often used to visualize large amounts of 3D data such as trees or buildings. Most phenomena that can be visualized by 3D symbols can be displayed using a point scene layer.
 
@@ -23,7 +16,7 @@ Point scene layers contain point features and their attributes. Point scene laye
 .Example of a point scene layer
 image::images/PointSceneLayer.png[width=600,align="center"]
 
-==== Point Scene Layer Structure
+=== Point Scene Layer Structure
 
 The point scene layer is structured into a tree of multiple JSON files. Besides storing information in the JSON format, some are also provided as binary buffer. Point scene layers can be used to create a scene layer package (*.slpk) or an I3S service. A point scene layer contains the following:
 
@@ -52,7 +45,7 @@ The point scene layer is structured into a tree of multiple JSON files. Besides 
 	|  +-- 8
 	|  +-- (...)
 ```
-==== HTTP API Overview
+==== Point Scene Layer HTTP API Overview
 
 The following API methods are available for accessing a Point Scene Layer:
 
@@ -66,11 +59,11 @@ The following API methods are available for accessing a Point Scene Layer:
 |To query  Attribute  Buffer|http://my.server.com/layers/{layerId}/nodes/{resourceID}/attributes/{AttribKey}  Node:  {AttribKey}  is listed at  scenelayer.attributeStorageInfo[].key
 |===
 
-==== Layer Definition: 3DSceneLayerInfo [Point Profile]
+=== Layer Definition: 3DSceneLayerInfo [Point Profile]
 
 The object 3DSceneLayerInfo describes the properties of a layer in a store. Every scene layer contains 3DSceneLayerInfo. For features based scene layers, such as 3D objects or point scene layers, may include the default symbology, as specified in the drawingInfo, which contains stylization information for a feature layer.
 
-*Properties*
+==== 3DSceneLayerInfo [Point Profile] Properties
 
 [width="90%",options="header"]
 |===

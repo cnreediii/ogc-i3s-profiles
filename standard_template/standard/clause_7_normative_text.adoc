@@ -21,14 +21,6 @@ The object 3DSceneLayerInfo describes the properties of a layer in a store. Ever
 
 [width="90%",options="header"]
 |===
-|Property |Type |Description| Mandatory 
-|id |integer|Unique numeric ID of the layer. |Yes
-|href|string |The relative URL to the 3DSceneLayerResource. Only present as part of the SceneServiceInfo resource. | optional
-|layerType |string |The user-visible layer type. Must be: Point |One (mandatory)
-|===
-
-[width="90%",options="header"]
-|===
 |Property |Type |Description| Mandatory
 | **id** | integer | Unique numeric ID of the layer. |
 | href | string | The relative URL to the 3DSceneLayerResource. Only present as part of the SceneServiceInfo resource. |

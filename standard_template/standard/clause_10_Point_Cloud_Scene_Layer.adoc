@@ -147,7 +147,7 @@ spatialReference, heightModelInfo, serviceUpdateTimeStamp, fields
 | **attributeStorageInfo** | [attributeInfo](attributeInfo.pcsl.md)[] | List of attributes included for this layer. 
 | drawingInfo | [drawingInfo](drawingInfo.pcsl.md) | An object containing drawing information. 
 | elevationInfo | [elevationInfo](elevationInfo.pcsl.md) | An object containing elevation information. 
-| fields | [field](field.cmn.md)[] |  |
+| fields | [field](field.cmn.md)[] | question on http://desktop.arcgis.com/en/arcmap/latest/manage-data/geodatabases/an-overview-of-attribute-domains.htm 
 |===
 
 *Note: properties in **bold** are required*

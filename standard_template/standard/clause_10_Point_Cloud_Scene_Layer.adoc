@@ -598,7 +598,7 @@ Class layer (pcsl)
 [width="90%",options="header"]
 |===
 | Property | Type | Description 
-| **mode** | string | The mode of the elevation. Point cloud scene layer supports absoluteHeight. |
+| **mode** | string | The mode of the elevation. Point cloud scene layer supports absoluteHeight. 
 | offset | number | The offset the point cloud scene layer. The elevation unit is the coordinate systems units.
 |===
 

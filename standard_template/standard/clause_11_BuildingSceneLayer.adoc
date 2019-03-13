@@ -10,9 +10,9 @@ disciplines such as architectural or piping, and its categories like windows or 
 
 *Example of a Building Scene Layer*
 
-[#img_LyonThematic,reftext='{figure-caption} {counter:figure-num}']
-.Thematic 3D Object Scene Layer without textures
-image::images/LyonThematic.png[width=600,align="center"]
+[#img_buildingSceneLayer,reftext='{figure-caption} {counter:figure-num}']
+.Example of a Building Scene Layer
+image::images/buildingSceneLayer.png[width=600,align="center"]
 
 ==== Building Scene Layer Structure
 

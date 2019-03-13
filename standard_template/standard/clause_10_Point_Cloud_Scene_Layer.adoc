@@ -1759,6 +1759,160 @@ Class layer (pcsl)
 } 
 ```
 
+=== I3S point cloud scene layer: labels
+
+Optionally, the statistics document may contain labeling information for the attribute values.
+
+==== Related:
+
+Class statistics (pcsl), Class label (pcsl), Class bitfieldLabels (pcsl)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description 
+| labels | [label](label.pcsl.md)[] | Array of string label/value pairs. Used when attribute represents a set of values. For example, ClassCode. 
+| bitfieldLabels | [bitfieldlabel](bitfieldlabel.pcsl.md)[] | Array of string label/bitNumber pairs. This is useful when the attribute represent a bitfield. For example, FLAGS. 
+|===
+
+==== Examples 
+
+===== Example: Class Code labels (LIDAR data) 
+
+```json
+ {
+    "labels": [
+        {
+            "value": 1.0,
+            "label": "Unclassified"
+        },
+        {
+            "value": 2.0,
+            "label": "Ground"
+        },
+        {
+            "value": 3.0,
+            "label": "Low Vegetation"
+        },
+        {
+            "value": 4.0,
+            "label": "Medium Vegetation"
+        },
+        {
+            "value": 5.0,
+            "label": "High Vegetation"
+        },
+        {
+            "value": 6.0,
+            "label": "Building"
+        },
+        {
+            "value": 7.0,
+            "label": "Low Point(noise)"
+        },
+        {
+            "value": 8.0,
+            "label": "Model Key"
+        },
+        {
+            "value": 9.0,
+            "label": "Water"
+        },
+        {
+            "value": 10.0,
+            "label": "Rail"
+        },
+        {
+            "value": 11.0,
+            "label": "Road Surface"
+        }
+    ]
+} 
+```
+
+=== I3S point cloud scene layer: Statistics Label
+
+### Related:
+
+Class label (pcsl)
+
+### Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description 
+| **value** | number | Value 
+| **label** | string | Label string
+|===
+
+*Note: properties in **bold** are required*
+
+==== Example: Class Code label 
+
+```json
+ {
+  "value": 2,
+  "label": "Ground"
+} 
+```
+
+===== Example: Flags labels (LIDAR data) 
+
+```json
+ {
+    "bitfieldLabels": [
+        {
+            "bitNumber": 3,
+            "label": "Overlap"
+        },
+        {
+            "bitNumber": 7,
+            "label": "Edge"
+        }
+    ]
+} 
+```
+
+=== I3S point cloud scene layer: Bit Field Label
+
+Example for LiDAR data:
+
+[width="90%",options="header"]
+|===
+| Bit Number | Label | description 
+| 0| Synthetic | If set then this point was created by a technique other than LIDAR collection such as digitized from a photogrammetric stereo model or by traversing a waveform
+| 1| Key-Point |If set, this point is considered to be a model key-point and thus generally should not be withheld in a thinning algorithm.
+|2| Withheld |If set, this point should not be included in processing (synonymous with Deleted).
+|3| Overlap | If set, this point is within the overlap region of two or more swaths or takes. Setting this bit is not mandatory (unless, of course, it is mandated by a particular delivery specification) but allows Classification of overlap points to be preserved.
+|4 | Scan Channel 0 | Scanner Channel is used to indicate the channel (scanner head) of a multichannel system. Channel 0 is used for single scanner systems 
+|5 | Scan Channel 1 |  Scanner Channel is used to indicate the channel (scanner head) of a multichannel system.
+|6| Scan Direction |The Scan Direction Flag denotes the direction at which the scanner mirror was traveling at the time of the output pulse. A bit value of 1 is a positive scan direction, and a bit value of 0 is a negative scan direction (where positive scan direction is a scan moving from the left side of the in-track direction to the right side and negative the opposite). 
+|7| Edge of flight line | The Edge of Flight Line data bit has a value of 1 only when the point is at the end of a scan. It is the last point on a given scan line before it changes direction or the mirror facet changes. Note that this field has no meaning for 360° Field of View scanners (such as Mobile LIDAR scanners) and should not be set 
+|===
+
+==== Related:
+
+Class labels (pcsl)
+
+### Properties
+
+| Property | Type | Description |
+| --- | --- | --- |
+| **bitNumber** | integer | Bit number (0 is LSB) |
+| **label** | string | Label string |
+
+*Note: properties in **bold** are required*
+
+==== Example: Flag label 
+
+```json
+ {
+  "bitNumber": 3,
+  "label": "Overlap"
+} 
+```
+
 === I3S point cloud scene layer: stats
 
 Contains statistics about each attribute. Statistics are useful to estimate attribute distribution and range.

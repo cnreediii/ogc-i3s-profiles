@@ -288,7 +288,7 @@ List of attributes included for this layer.
 
 ==== Related:
 
-Class Layer, Class Value
+Class Layer (pcl), Class Value (pcl)
 
 ==== Properties
 
@@ -355,7 +355,7 @@ Attribute description as field.
 
 ### Related:
 
-Class store, Class vextexAttributes
+Class store (pcl) , Class vextexAttributes (pcl)
 
 ==== Properties
 
@@ -398,7 +398,7 @@ The vertex buffer description.
 
 ==== Related:
 
-Class defaultGeometrySchema], Class Vertex
+Class defaultGeometrySchema (pcl), Class Vertex (pcl)
 
 ==== Properties
 
@@ -424,7 +424,7 @@ A scalar or vector value.
 
 ==== Related:
 
-Class vertexAttributes], Class attributeInfo
+Class vertexAttributes (pcl), Class attributeInfo (pcl)
 
 ==== Properties
 
@@ -468,7 +468,7 @@ This class describes the storage properties for the layer.
 
 ==== Related:
 
-Class layer, Class Index, Class defaultGeometrySchema
+Class Layer (pcl), Class Index (pcl), Class defaultGeometrySchema (pcl)
 
 ==== Properties
 
@@ -530,7 +530,7 @@ Class Index describes the properties of the index (i.e. bounding volume tree) of
 
 ==== Related classes
 
-class store
+Class pclStore
 
 ==== Properties
 
@@ -569,7 +569,7 @@ Assuming [layer.store.index.nodesPerPage](index.md) = 64, then `node id = 78` wi
 
 ==== Related:
 
-Class Layer, Class Node
+Class pclLayer, Class pclNode
 
 ==== Properties
 
@@ -1021,7 +1021,7 @@ A single bounding volume hierarchy node
 
 ==== Related:
 
-Class Nodepage
+Class Nodepage (pcl)
 
 ==== Properties
 
@@ -1065,6 +1065,48 @@ Class Nodepage
     "childCount": 0,
     "vertexCount": 7872,
     "lodThreshold": 8979.959961
+} 
+```
+
+=== I3S Point Cloud Scene Layer: Oriented Bounding Boxes
+
+Oriented bounding boxes
+
+==== Related:
+
+Class Node (pcl)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description
+| **center** | number[3] | The center point of the oriented bounding box. For a global scene, i.e. XY coordinate system in WGS1984, center is in longitude of decimal degrees, latitude of decimal degrees, elevation in meters.
+| **halfSize** | number[3] | Half size of the oriented bounding box in spatial reference units (or meters for global scenes).
+| **quaternion** | number[4] | Orientation of the oriented bounding box as a 4-component quaternion. For global scene, quaternion is in Earth-Centric-Earth-Fixed (ECEF) Cartesian space. ( Z+ : North, Y+ : East, X+: lon=lat=0.0).
+
+*Note: properties in **bold** are required*
+
+==== Example: Global scene (WSG84) oriented-bounding box 
+
+```json
+ {
+  "center": [
+    -105.01482,
+    39.747244,
+    1596.040551
+  ],
+  "halfSize": [
+    29.421873,
+    29.539055,
+    22.082193
+  ],
+  "quaternion": [
+    0.420972,
+    -0.055513,
+    -0.118217,
+    0.897622
+  ]
 } 
 ```
 

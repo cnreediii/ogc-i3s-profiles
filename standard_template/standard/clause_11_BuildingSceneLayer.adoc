@@ -767,3 +767,77 @@ The filter authoring info object contains metadata about the authoring process f
   ]
 } 
 ```
+
+=== Filter Authoring Info for Filter Blocks (filterBlockAuthoringInfo)
+
+The filter authoring info object contains metadata about the authoring process for creating a filter block object. This allows the authoring client to save specific, overridable settings.  The next time it is accessed via an authoring client, their selections are remembered. Non-authoring clients can ignore it.
+
+==== Related:
+
+[bld::filterAuthoringInfo](filterAuthoringInfo.bld.md)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description 
+| **filterTypes** | [filterType](filterType.bld.md)[] | Array of defined filter types. Each filter type has an array of filter values.
+|===
+
+*Note: properties in **bold** are required*
+
+==== Examples 
+
+===== Example: Building Scene Layer filter block authoring info 
+
+```json
+ {
+  "filterTypes": [
+    {
+      "filterType": "BldgLevel",
+      "filterValues": [
+        "3"
+      ]
+    },
+    {
+      "filterType": "CreatedPhase",
+      "filterValues": [
+        "1"
+      ]
+    }
+  ]
+} 
+```
+
+=== Filter Type (filterType)
+
+The file authoring information for a filter, including the filter type and its value settings.
+
+==== Related:
+
+[bld::filterBlockAuthoringInfo](filterBlockAuthoringInfo.bld.md)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description
+| **filterType** | string | Represents the filter type name. Name is a unique identifier.
+| **filterValues** | string[], integer[], number[] | Array of filter values. Filter values are the attributes that can be stored for individual fields in a layer.
+|===
+
+*Note: properties in **bold** are required*
+
+==== Examples 
+
+===== Example: Building Scene Layer filter type 
+
+```json
+ {
+  "filterType": "CreatedPhase",
+  "filterValues": [
+    "1"
+  ]
+} 
+```
+

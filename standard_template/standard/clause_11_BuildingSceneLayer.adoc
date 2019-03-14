@@ -559,7 +559,7 @@ Statistics for all building scene layer sublayers. Captures statistical informat
 } 
 ```
 
-=== Building scene layer attribute statistics
+=== Building scene layer attribute statistics (attributestats)
 
 Concatenated attribute statistics. If needed, the type of the attribute (string or number) may be inferred from `mostFrequentValues` and/or `min`/`max` fields.
 
@@ -640,3 +640,130 @@ Concatenated attribute statistics. If needed, the type of the attribute (string 
 } 
 ```
 
+=== Filter
+
+The filter object can be applied to a building scene layer. Filter allows client applications to reduce the drawn elements of a building to specific types and values.
+
+==== Related:
+
+[bld::layer](layer.bld.md)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description 
+| **id** | string | Global ID as unique identifier of the filter. 
+| **name** | string | Name of the filter. 
+| **description** | string | Description of the filter. 
+| isDefaultFilter | boolean | Indicates if a filter is the default filter. Clients use the default filter to show the current state of a building. For example, if 'created' is the default filter, all elements in the 'created' phases are drawn, while elements in the 'demolished' phases are invisible.  The default filter is not shown in the UI and does not have Authoring Info. (Can build specific UI for this filter) 
+| isVisible | boolean | Defines if a filter is visible within the client application. Used to exclude filters that are overwritten from a group of filters shown in the client application. 
+| **filterBlocks** | [filterBlock](filterBlock.bld.md)[1:] | Array of filter blocks defining the filter. A filter contains at least one filter block. 
+| filterAuthoringInfo | [filterAuthoringInfo](filterAuthoringInfo.bld.md) | Authoring Info used to generate user interface for authoring clients.
+|== 
+
+*Note: properties in **bold** are required*
+
+==== Examples 
+
+===== Example: Building Scene Layer 
+
+```json
+ {
+  "id": "6339E293-B52E-4F49-899A-E177DEC0D644",
+  "name": "Default",
+  "description": "Filter by all created phases.",
+  "isDefaultFilter": true,
+  "isVisible": false,
+  "filterBlocks": [
+    {
+      "title": "Created Phase 1",
+      "filterMode": {
+        "type": "solid"
+      },
+      "filterExpression": "CreatedPhase=1"
+    }
+  ]
+} 
+```
+
+=== Filter Block (filterBlock)
+
+A filter block defines what elements will be filtered with a specific filter mode.  To ensure performance on client applications, it is not recommended to declare multiple filter blocks with the same filter mode. Filter blocks are contained in a filter for a building scene layer. Each filter includes at least one filter block.
+
+==== Related:
+
+[bld::filter](filter.bld.md)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description 
+| **title** | string | Title of the filter block. 
+| **filterMode** | [filterMode](filterMode.bld.md) | Filter mode defines how features are drawn. For example, the filter mode of a filter can be solid or wire frame. 
+| **filterExpression** | string | Filter query expression for a building scene layer.
+|===
+
+*Note: properties in **bold** are required*
+
+==== Examples 
+
+===== Example: Filter block 
+
+```json
+ {
+  "title": "Created Phase 1",
+  "filterMode": {
+    "type": "solid"
+  },
+  "filterExpression": "CreatedPhase=1"
+} 
+```
+
+=== Filter Authoring Info for building scene layer (filterAuthoringInfo)
+
+The filter authoring info object contains metadata about the authoring process for creating a filter object. This allows the authoring client to save specific, overridable settings.  The next time it is accessed with an authoring client, the selections are remembered. Non-authoring clients can ignore it.
+
+==== Related:
+
+[bld::filter](filter.bld.md)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description
+| **type** | string | Declares type or filter authoring info.<div>Must be:<ul><li>`checkbox`: Client UI with checkbox representation for each filter type and filter value.</li></ul></div>
+| **filterblocks** | [filterBlockAuthoringInfo](filterBlockAuthoringInfo.bld.md)[] | Array of filter block authoring info.
+|===
+
+*Note: properties in **bold** are required*
+
+==== Examples 
+
+===== Example: Building Scene Layer filter authoring info 
+
+```json
+ {
+  "type": "checkbox",
+  "filterblocks": [
+    {
+      "filterTypes": [
+        {
+          "filterType": "BldgLevel",
+          "filterValues": [
+            "3"
+          ]
+        },
+        {
+          "filterType": "CreatedPhase",
+          "filterValues": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ]
+} 
+```

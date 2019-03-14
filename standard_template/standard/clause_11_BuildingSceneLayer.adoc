@@ -63,7 +63,7 @@ The following API methods are available for Building Scene Layer:
 |To query  Attribute  Buffer|http://my.server.com/layers/{layerId}/nodes/{resourceID}/attributes/{AttribKey}  Node:  {AttribKey}  is listed at  scenelayer.attributeStorageInfo[].key 
 |===
 
-=== Building Scene Layer
+=== Building Scene Layer (layer.bld)
 
 ==== Building scene layer structure
 
@@ -110,6 +110,7 @@ match the featureService sublayers IDs. Any group layers ID in the scene layer n
 ```
 
 ==== Building scene layer service:
+
 The service definition is identical to other scene layer service definitions and will list a single layer (the BIM layer) e.g:
 ``` js
 {
@@ -356,7 +357,7 @@ its matching building scene layer will be open.
 } 
 ```
 
-=== Defining the Full Extent for a Building Scene Layer
+=== Defining the Full Extent for a Building Scene Layer (fullExtent.cmn)
 
 This class allows the applicatin to define the full geographic extent (x,y,z) of the building scene layer.
 
@@ -397,7 +398,7 @@ Class Layer (bld) [bld::layer](layer.bld.md)
 } 
 ```
 
-=== Building Scene Layer Sublayer
+=== Building Scene Layer Sublayer (sublayer.bld)
 
 A building scene layer is composed of an overview and the full model containing discipline and category layer. These layer types are represented as sublayers. A sublayer may contain other layers or sublayers (i.e `group`) to form a nested structure.
 
@@ -486,7 +487,7 @@ Class layer (bld) [bld::sublayer](sublayer.bld.md), [bld::layer](layer.bld.md)
 } 
 ```
 
-=== Building scene layer Statistics
+=== Building scene layer Statistics (statsummary.bld)
 
 Statistics for all building scene layer sublayers. Captures statistical information for each field in the building scene layer and the sublayers containing this fields.
 
@@ -559,7 +560,7 @@ Statistics for all building scene layer sublayers. Captures statistical informat
 } 
 ```
 
-=== Building scene layer attribute statistics (attributestats)
+=== Building scene layer attribute statistics (attributestats.bld)
 
 Concatenated attribute statistics. If needed, the type of the attribute (string or number) may be inferred from `mostFrequentValues` and/or `min`/`max` fields.
 
@@ -640,7 +641,7 @@ Concatenated attribute statistics. If needed, the type of the attribute (string 
 } 
 ```
 
-=== Filter
+=== Filter (filter.bld)
 
 The filter object can be applied to a building scene layer. Filter allows client applications to reduce the drawn elements of a building to specific types and values.
 
@@ -687,7 +688,7 @@ The filter object can be applied to a building scene layer. Filter allows client
 } 
 ```
 
-=== Filter Block (filterBlock)
+=== Filter Block (filterBlock.bld)
 
 A filter block defines what elements will be filtered with a specific filter mode.  To ensure performance on client applications, it is not recommended to declare multiple filter blocks with the same filter mode. Filter blocks are contained in a filter for a building scene layer. Each filter includes at least one filter block.
 
@@ -721,7 +722,7 @@ A filter block defines what elements will be filtered with a specific filter mod
 } 
 ```
 
-=== Filter Authoring Info for building scene layer (filterAuthoringInfo)
+=== Filter Authoring Info for building scene layer (filterAuthoringInfo.bld)
 
 The filter authoring info object contains metadata about the authoring process for creating a filter object. This allows the authoring client to save specific, overridable settings.  The next time it is accessed with an authoring client, the selections are remembered. Non-authoring clients can ignore it.
 
@@ -768,7 +769,7 @@ The filter authoring info object contains metadata about the authoring process f
 } 
 ```
 
-=== Filter Authoring Info for Filter Blocks (filterBlockAuthoringInfo)
+=== Filter Authoring Info for Filter Blocks (filterBlockAuthoringInfo.bld)
 
 The filter authoring info object contains metadata about the authoring process for creating a filter block object. This allows the authoring client to save specific, overridable settings.  The next time it is accessed via an authoring client, their selections are remembered. Non-authoring clients can ignore it.
 
@@ -809,7 +810,7 @@ The filter authoring info object contains metadata about the authoring process f
 } 
 ```
 
-=== Filter Type (filterType)
+=== Filter Type (filterType.bld)
 
 The file authoring information for a filter, including the filter type and its value settings.
 
@@ -841,3 +842,79 @@ The file authoring information for a filter, including the filter type and its v
 } 
 ```
 
+=== Filter Mode (filterMode.bld)
+
+Filter mode represents the way elements draw when participating in a filter block.
+
+==== Related:
+
+[bld::filterBlock](filterBlock.bld.md)
+
+==== oneOf:
+
+- [filterModeSolid](filterModeSolid.bld.md)
+- [filterModeWireFrame](filterModeWireFrame.bld.md)
+
+=== Filter Mode: solid (filterModeSolid.bld)
+
+Shows all elements that comply with the filter block of a filter in a building scene layer.
+
+==== Related:
+
+[bld::filterMode](filterMode.bld.md)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description 
+| type | string | Declares filter mode of type solid.<div>Must be:<ul><li>`solid`</li></ul></div>
+|===
+
+==== Examples 
+
+===== Example: filterMode solid 
+
+```json
+ {
+  "type": "solid"
+} 
+```
+
+=== Filter Mode: wire frame (filterModeWireFrame.bld)
+
+Shows all elements that comply with the filter block of a filter in a building scene layer.  The elements are drawn with an edge line.
+
+==== Related:
+
+[bld::filterMode](filterMode.bld.md)
+
+==== Properties
+
+[width="90%",options="header"]
+|===
+| Property | Type | Description 
+| type | string | Declares filter mode of type wire frame.<div>Must be:<ul><li>`wireFrame`</li></ul></div>
+| edges |  | An object defining solid edges of a feature. [See more](https://developers.arcgis.com/web-scene-specification/objects/edges/) information on supported edges in ArcGIS clients.
+|===
+
+==== Examples 
+
+===== Example: Filter mode wire frame 
+
+```json
+ {
+  "type": "wireFrame",
+  "edges": {
+    "type": "solid",
+    "color": [
+      255,
+      0,
+      0
+    ],
+    "size": 0.75,
+    "transparency": 10,
+    "extensionLength": 5
+  }
+} 
+```

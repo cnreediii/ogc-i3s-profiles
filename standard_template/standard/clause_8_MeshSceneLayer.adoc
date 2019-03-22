@@ -9,7 +9,7 @@ original input image information as a textured mesh including 3D objects, such a
 elevation information.
 
 [#img_meshscenelayer,reftext='{figure-caption} {counter:figure-num}']
-.Example of a integrated mesh scene layer
+.Example of an integrated mesh scene layer
 image::images/MeshSceneLayer.png[width=600,align="center"]
 
 === Integrated Mesh Scene Layer Structure

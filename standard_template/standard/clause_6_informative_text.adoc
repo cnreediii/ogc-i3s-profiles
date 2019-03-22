@@ -14,8 +14,3 @@ The I3S format is declarative and extendable and can be used to represent differ
 
 This Community Standard document provides informative and normative clauses that define how to specify and encode the Point, Building m and Point Cloud Profiles.
 
-=== Clauses not containing normative material sub-clause 1
-
-Paragraph
-
-=== Clauses not containing normative material sub-clause 2

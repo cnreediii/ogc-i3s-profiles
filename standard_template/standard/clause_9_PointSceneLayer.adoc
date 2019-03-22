@@ -65,7 +65,7 @@ The object 3DSceneLayerInfo describes the properties of a layer in a store. Ever
 
 ==== 3DSceneLayerInfo [Point Profile] Properties
 
-The following table specifies the properties that comprise a 3DSceneLayerInfo [Point Profile] JSON document. Please ote that a property in **bold* type is a mandatory property.
+The following table specifies the properties that comprise a 3DSceneLayerInfo [Point Profile] JSON document. Please note that a property in **bold* type is a mandatory property.
 
 [width="90%",options="header"]
 |===

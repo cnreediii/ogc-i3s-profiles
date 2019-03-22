@@ -12,5 +12,5 @@ The I3S format is declarative and extendable and can be used to represent differ
 •	Point Clouds - (e.g. large point data from LiDAR) 
 •	Building Scene Layer (e.g. comprehensive building model including building components)
 
-This Community Standard document provides informative and normative clauses that define how to specify and encode the Point, Building m and Point Cloud Profiles.
+This Community Standard document provides informative and normative clauses that define how to specify and encode the I3S Layer Types.
 

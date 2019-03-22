@@ -6,6 +6,9 @@ For the purposes of this document, the following additional terms and definition
 === *LiDAR*
 Light Detection and Ranging, is a remote sensing method that uses light in the form of a pulsed laser to measure ranges (variable distances) to the Earth.
 
+=== *Level of Detail (LOD)*
+
+
 === *Near Infrared Light*
 Generally refers to light within the wavenumber range of 12,500 to 4,000 cm-1 (wavelengths from 800 to 2,500 nm) (https://www.shimadzu.com/an/ftir/support/tips/letter9/nir1.html, March 2019)
 

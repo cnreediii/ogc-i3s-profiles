@@ -114,11 +114,13 @@ Scanning an SLPK (ZIP store) containing millions of documents is usually ineffic
 
 3. Retrieve the file from the ZIP archive using the offset associated with key.
 
-=== I3S point cloud scene layer definition
+=== I3S point cloud scene layer class definitions
+
+==== I3S point cloud scene layer definition (layer.pcsl.md)
 
 Describes the point cloud scene layer.
 
-==== Related to:
+===== Related to:
 
 Point Cloud Class relations
 
@@ -128,7 +130,7 @@ Core Class relations
 
 spatialReference, heightModelInfo, serviceUpdateTimeStamp, fields
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -152,7 +154,7 @@ spatialReference, heightModelInfo, serviceUpdateTimeStamp, fields
 
 *Note: properties in **bold** are required*
 
-==== Example: Point cloud layer 
+===== Example: Point cloud layer 
 
 ```json
  {
@@ -332,15 +334,15 @@ spatialReference, heightModelInfo, serviceUpdateTimeStamp, fields
 } 
 ```
 
-=== I3S point cloud scene layer: attributeInfo
+==== I3S point cloud scene layer: attributeInfo
 
 List of attributes included for this layer.
 
-==== Related:
+===== Related:
 
 Class Layer (pcl), Class Value (pcl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -354,9 +356,9 @@ Class Layer (pcl), Class Value (pcl)
 
 *Note: properties in **bold** are required*
 
-==== Examples 
+===== Examples 
 
-===== Example: Elevation pseudo-attribute 
+====== Example: Elevation pseudo-attribute 
 
 ```json
  {
@@ -366,7 +368,7 @@ Class Layer (pcl), Class Value (pcl)
 } 
 ```
 
-===== Example: Color attribute 
+====== Example: Color attribute 
 
 ```json
  {
@@ -383,7 +385,7 @@ Class Layer (pcl), Class Value (pcl)
 } 
 ```
 
-===== Example: 8-bit uncompressed/GZIP compressed class-codes 
+====== Example: 8-bit uncompressed/GZIP compressed class-codes 
 
 ```json
  {
@@ -399,15 +401,15 @@ Class Layer (pcl), Class Value (pcl)
 } 
 ```
 
-=== I3S point cloud scene layer: defaultGeometrySchema
+==== I3S point cloud scene layer: defaultGeometrySchema
 
 Attribute description as field.
 
-### Related:
+===== Related to:
 
 Class store (pcl) , Class vextexAttributes (pcl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -422,7 +424,7 @@ Class store (pcl) , Class vextexAttributes (pcl)
 
 *Note: properties in **bold** are required* 
 
-==== Example: defaultGeometrySchema 
+===== Example: defaultGeometrySchema 
 
 ```json
  {
@@ -442,15 +444,15 @@ Class store (pcl) , Class vextexAttributes (pcl)
 } 
 ```
 
-=== I3S point cloud scene layer: vertexAttributes
+==== I3S point cloud scene layer: vertexAttributes
 
 The vertex buffer description.
 
-==== Related:
+===== Related:
 
 Class defaultGeometrySchema (pcsl), Class Vertex (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -458,7 +460,7 @@ Class defaultGeometrySchema (pcsl), Class Vertex (pcsl)
 | position | [value](value.pcsl.md) | Only LEPCC compressed (X,Y,Z) is supported. Decompressed data SHALL be absolute `Float64` position.
 |===
 
-==== Example: vertexAttributes 
+===== Example: vertexAttributes 
 
 ```json
  {
@@ -468,15 +470,15 @@ Class defaultGeometrySchema (pcsl), Class Vertex (pcsl)
   }
 } 
 ```
-=== I3S point cloud scene layer: Values
+==== I3S point cloud scene layer: Values
 
 A scalar or vector value.
 
-==== Related:
+===== Related:
 
 Class vertexAttributes (pcl), Class attributeInfo (pcl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -488,9 +490,9 @@ Class vertexAttributes (pcl), Class attributeInfo (pcl)
 
 *Note: properties in **bold** are required*
 
-==== Examples 
+===== Examples 
 
-===== Example: Scalar value definition 
+====== Example: Scalar value definition 
 
 An unsigned 16 bit value. 
 
@@ -501,7 +503,7 @@ An unsigned 16 bit value.
 } 
 ```
 
-===== Example: Vector value definition 
+====== Example: Vector value definition 
 
 The vector value can only be RGB-8 value. 
 
@@ -512,15 +514,15 @@ The vector value can only be RGB-8 value.
 } 
 ```
 
-=== I3S point cloud scene layer: drawingInfo
+==== I3S point cloud scene layer: drawingInfo
 
 The drawingInfo object contains drawing information for a point cloud scene layer. 
 
-==== Related:
+===== Related:
 
 Class layer (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -530,7 +532,7 @@ Class layer (pcsl)
 
 *Note: properties in **bold** are required*
 
-==== Example: drawingInfo 
+===== Example: drawingInfo 
 
 ```json
  {
@@ -585,15 +587,15 @@ Class layer (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: elevationInfo
+==== I3S point cloud scene layer: elevationInfo
 
 The elevationInfo defines how content in a scene layer is aligned to the ground.
 
-==== Related:
+===== Related:
 
 Class layer (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -604,7 +606,7 @@ Class layer (pcsl)
 
 *Note: properties in **bold** are required*
 
-==== Example: elevationInfo 
+===== Example: elevationInfo 
 
 ```json
  {
@@ -613,15 +615,15 @@ Class layer (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: store
+==== I3S point cloud scene layer: store
 
 This class describes the storage properties for the layer.
 
-==== Related:
+===== Related:
 
 Class Layer (pcl), Class Index (pcl), Class defaultGeometrySchema (pcl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -638,7 +640,7 @@ Class Layer (pcl), Class Index (pcl), Class defaultGeometrySchema (pcl)
 
 *Note: properties in **bold** are required*
 
-==== Example: store 
+===== Example: store 
 
 ```json
  {
@@ -675,15 +677,15 @@ Class Layer (pcl), Class Index (pcl), Class defaultGeometrySchema (pcl)
 } 
 ```
 
-=== I3S point cloud scene layer: index
+==== I3S point cloud scene layer: index
 
 Class Index describes the properties of the index (i.e. bounding volume tree) of the layer.
 
-==== Related classes
+===== Related classes
 
 Class pclStore
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -697,7 +699,7 @@ Class pclStore
 
 *Note: properties in **bold** are required*
 
-==== Example of Index for Point Cloud Layer
+===== Example of Index for Point Cloud Layer
 
 ```json
  {
@@ -708,7 +710,7 @@ Class pclStore
 } 
 ```
 
-=== I3S point cloud scene layer: nodepage
+==== I3S point cloud scene layer: nodepage
 
 Nodes represent the spatial index of the data as a bounding-volume hierarchy. To reduce the number of node-index requests required to traverse this index tree, they are organized in *pages* of [layer.index.nodesPerPage](index.md) nodes.  
 
@@ -718,11 +720,11 @@ Children SHALL be **contiguous**, in index range, so they may be located using  
 
 Assuming [layer.store.index.nodesPerPage](index.md) = 64, then `node id = 78` will be in page `page_id = floor( 78 / 64) = 1` (i.e. second page)
 
-==== Related:
+===== Related:
 
 Class pclLayer, Class pclNode
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -732,7 +734,7 @@ Class pclLayer, Class pclNode
 
 *Note: properties in **bold** are required*
 
-==== Example: Global scene (WSG84, last page) 
+===== Example: Global scene (WSG84, last page) 
 
 ```json
  {
@@ -1166,15 +1168,15 @@ Class pclLayer, Class pclNode
 } 
 ```
 
-=== I3S point cloud scene layer: node
+==== I3S point cloud scene layer: node
 
 A single bounding volume hierarchy node
 
-==== Related:
+===== Related:
 
 Class Nodepage (pcl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -1189,7 +1191,7 @@ Class Nodepage (pcl)
 
 *Note: properties in **bold** are required*
 
-==== Example: Global scene (WSG84) 
+===== Example: Global scene (WSG84) 
 
 ```json
  {
@@ -1219,15 +1221,15 @@ Class Nodepage (pcl)
 } 
 ```
 
-=== I3S Point Cloud Scene Layer: Oriented Bounding Boxes
+==== I3S Point Cloud Scene Layer: Oriented Bounding Boxes
 
 Oriented bounding boxes
 
-==== Related:
+===== Related:
 
 Class Node (pcl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -1239,7 +1241,7 @@ Class Node (pcl)
 
 *Note: properties in **bold** are required*
 
-==== Example: Global scene (WSG84) oriented-bounding box 
+===== Example: Global scene (WSG84) oriented-bounding box 
 
 ```json
  {
@@ -1262,15 +1264,15 @@ Class Node (pcl)
 } 
 ```
 
-=== I3S point cloud scene layer: Attribute Statistics
+==== I3S point cloud scene layer: Attribute Statistics
 
 Contains statistics about each attribute. Statistics are useful to estimate attribute distribution and range. By convention,  statistics are stored by attribute at `layers/0/statistics/{attribute_id}`
 
-==== Related:
+===== Related:
 
 Class layer (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -1280,9 +1282,9 @@ Class layer (pcsl)
 | labels | [labels](labels.pcsl.md) |  The statistics document may contain labeling information for the attribute values. 
 |===
 
-==== Examples 
+===== Examples 
 
-===== Example: Elevation statistic (point.z statistics) 
+====== Example: Elevation statistic (point.z statistics) 
 
 ```json
  {
@@ -1307,7 +1309,7 @@ Class layer (pcsl)
  
 ```
 
-===== Example: Intensity statistics 
+====== Example: Intensity statistics 
 
 ```json
  {
@@ -1332,7 +1334,7 @@ Class layer (pcsl)
  
 ```
 
-===== Example: RGB color statistics ( please note that histogram is not required here) 
+====== Example: RGB color statistics ( please note that histogram is not required here) 
 
 ```json
  {
@@ -1357,7 +1359,7 @@ Class layer (pcsl)
  
 ```
 
-===== Example: Class code statistics with labels 
+====== Example: Class code statistics with labels 
 
 ```json
  {
@@ -1485,7 +1487,7 @@ Class layer (pcsl)
 } 
 ```
 
-===== Example: Flags statistics (LIDAR point cloud) 
+====== Example: Flags statistics (LIDAR point cloud) 
 
 ```json
  {
@@ -1675,7 +1677,7 @@ Class layer (pcsl)
 } 
 ```
 
-===== Example: Returns statistics (LIDAR point cloud) 
+====== Example: Returns statistics (LIDAR point cloud) 
 
 ```json
  {
@@ -1759,15 +1761,15 @@ Class layer (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: labels
+==== I3S point cloud scene layer: labels
 
 Optionally, the statistics document may contain labeling information for the attribute values.
 
-==== Related:
+===== Related:
 
 Class statistics (pcsl), Class label (pcsl), Class bitfieldLabels (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -1776,9 +1778,9 @@ Class statistics (pcsl), Class label (pcsl), Class bitfieldLabels (pcsl)
 | bitfieldLabels | [bitfieldlabel](bitfieldlabel.pcsl.md)[] | Array of string label/bitNumber pairs. This is useful when the attribute represent a bitfield. For example, FLAGS. 
 |===
 
-==== Examples 
+===== Examples 
 
-===== Example: Class Code labels (LIDAR data) 
+====== Example: Class Code labels (LIDAR data) 
 
 ```json
  {
@@ -1831,13 +1833,13 @@ Class statistics (pcsl), Class label (pcsl), Class bitfieldLabels (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: Statistics Label
+==== I3S point cloud scene layer: Statistics Label
 
-### Related:
+===== Related:
 
 Class label (pcsl)
 
-### Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -1848,7 +1850,9 @@ Class label (pcsl)
 
 *Note: properties in **bold** are required*
 
-==== Example: Class Code label 
+===== Examples
+
+====== Example: Class Code label 
 
 ```json
  {
@@ -1857,7 +1861,7 @@ Class label (pcsl)
 } 
 ```
 
-===== Example: Flags labels (LIDAR data) 
+====== Example: Flags labels (LIDAR data) 
 
 ```json
  {
@@ -1874,7 +1878,7 @@ Class label (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: Bit Field Label
+==== I3S point cloud scene layer: Bit Field Label
 
 Example for LiDAR data:
 
@@ -1891,11 +1895,11 @@ Example for LiDAR data:
 |7| Edge of flight line | The Edge of Flight Line data bit has a value of 1 only when the point is at the end of a scan. It is the last point on a given scan line before it changes direction or the mirror facet changes. Note that this field has no meaning for 360° Field of View scanners (such as Mobile LIDAR scanners) and should not be set 
 |===
 
-==== Related:
+===== Related:
 
 Class labels (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -1906,7 +1910,7 @@ Class labels (pcsl)
 
 *Note: properties in **bold** are required*
 
-==== Example: Flag label 
+===== Example: Flag label 
 
 ```json
  {
@@ -1915,15 +1919,15 @@ Class labels (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: stats
+==== I3S point cloud scene layer: stats
 
 Contains statistics about each attribute. Statistics are useful to estimate attribute distribution and range.
 
-==== Related:
+===== Related:
 
 Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 
-### Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -1941,9 +1945,9 @@ Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 
 *Note: properties in **bold** are required*
 
-==== Examples 
+===== Examples 
 
-===== Example: Elevation statistic (point.z statistics) 
+====== Example: Elevation statistic (point.z statistics) 
 
 ```json
  {
@@ -2212,7 +2216,7 @@ Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 } 
 ```
 
-===== Example: Intensity statistics 
+====== Example: Intensity statistics 
 
 ```json
  {
@@ -2264,7 +2268,7 @@ Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 } 
 ```
 
-===== Example: RGB color statistics ( please note that histogram is not required here) 
+====== Example: RGB color statistics ( please note that histogram is not required here) 
 
 ```json
  {
@@ -2283,7 +2287,7 @@ Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 } 
 ```
 
-===== Example: Class code statistics with labels 
+====== Example: Class code statistics with labels 
 
 ```json
  {
@@ -2360,7 +2364,7 @@ Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 } 
 ```
 
-===== Example: Flags statistics (LIDAR point cloud) 
+====== Example: Flags statistics (LIDAR point cloud) 
 
 ```json
  {
@@ -2535,7 +2539,7 @@ Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 } 
 ```
 
-===== Example: Returns statistics (LIDAR point cloud) 
+====== Example: Returns statistics (LIDAR point cloud) 
 
 ```json
  {
@@ -2616,15 +2620,15 @@ Class statistics (pcsl), Class histogram (pcsl), Class valuecount (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: histogram
+==== I3S point cloud scene layer: histogram
 
 The histogram of the point cloud scene layer. The bin size may be computed as (max-min)/bin count. Please note that stats.histo.min/max is not equivalent to stats.min/max since values smaller than stats.histo.min and greater than stats.histo.max are counted in the first and last bin respectively. The values stats.min and stats.max may be conservative estimates.
 
-==== Related:
+===== Related:
 
 Class stats (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -2636,7 +2640,7 @@ Class stats (pcsl)
 
 *Note: properties in **bold** are required*
 
-==== Example: histogram 
+===== Example: histogram 
 
 ```json
  {
@@ -2656,15 +2660,15 @@ Class stats (pcsl)
 } 
 ```
 
-=== I3S point cloud scene layer: Values
+==== I3S point cloud scene layer: Values
 
 A scalar or vector value.
 
-==== Related:
+===== Related:
 
 Class stats (pcsl)
 
-==== Properties
+===== Properties
 
 [width="90%",options="header"]
 |===
@@ -2675,7 +2679,7 @@ Class stats (pcsl)
 
 *Note: properties in **bold** are required*
 
-==== Example: Scalar value definition 
+===== Example: Scalar value definition 
 
 An unsigned 16 bit value. 
 
